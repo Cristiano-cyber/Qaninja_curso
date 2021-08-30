@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210829 20:12:03.497" rpa="false" schemaversion="2">
+<suite id="s1" name="Login Form" source="C:\qaninja\robot\web\tests\login_form.robot">
+<test id="s1-t1" name="Login com sucesso">
+<kw name="Nova sessão" library="base" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210829 20:12:04.236" level="INFO">Opening browser 'Chrome' to base url 'https://training-wheels-protocol.herokuapp.com'.</msg>
+<status status="PASS" starttime="20210829 20:12:04.236" endtime="20210829 20:12:10.120"/>
+</kw>
+<status status="PASS" starttime="20210829 20:12:04.236" endtime="20210829 20:12:10.120"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210829 20:12:10.120" level="INFO">Opening url 'https://training-wheels-protocol.herokuapp.com/login'</msg>
+<status status="PASS" starttime="20210829 20:12:10.120" endtime="20210829 20:12:11.287"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=username]</arg>
+<arg>stark</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210829 20:12:11.295" level="INFO">Typing text 'stark' into text field 'css:input[name=username]'.</msg>
+<status status="PASS" starttime="20210829 20:12:11.295" endtime="20210829 20:12:11.505"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=password]</arg>
+<arg>jarvis!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210829 20:12:11.508" level="INFO">Typing text 'jarvis!' into text field 'css:input[name=password]'.</msg>
+<status status="PASS" starttime="20210829 20:12:11.507" endtime="20210829 20:12:11.727"/>
+</kw>
+<kw name="Encerra sessão" library="base" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210829 20:12:12.301" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-70.png"&gt;&lt;img src="selenium-screenshot-70.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210829 20:12:11.727" endtime="20210829 20:12:12.301"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210829 20:12:12.301" endtime="20210829 20:12:16.690"/>
+</kw>
+<status status="PASS" starttime="20210829 20:12:11.727" endtime="20210829 20:12:16.691"/>
+</kw>
+<status status="PASS" starttime="20210829 20:12:04.235" endtime="20210829 20:12:16.691"/>
+</test>
+<status status="PASS" starttime="20210829 20:12:03.504" endtime="20210829 20:12:16.695"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Form">Login Form</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
